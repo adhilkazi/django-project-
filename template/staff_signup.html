@@ -1,0 +1,97 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <style>
+        a{
+            color: rgb(149, 156, 161);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home">
+        <div class="condiner">
+            <div class="child-primery">
+                <div class="staff-child-text">
+                    <h3>beach hotal</h3>
+                    <div class="validation-stff-singn">
+                        <div class=" stff-sighn">
+
+                            <p>sign  up here</p>
+
+                            <form action="" class="stf-input" method="POST" enctype="multipart/form-data">
+                                {%csrf_token%}
+                                
+                                <div class="in">
+                                    <input type="text" name="firstname" placeholder="first name">
+                                    <input type="text" name="lastname" placeholder="last name">
+                                </div>
+                                <div class="eh">
+                                    <input type="email" name="email" id="" placeholder="email">
+                                    <br>
+                                    <input type="text" name="phonenumber" placeholder="phon number">
+                                    <input type="text" name="department" placeholder="department">
+                                </div>
+                                <div class="ii">
+                                    <input type="text" name="username" placeholder="username">
+                                    <input type="password" name="password" id="" placeholder="password">
+
+                                </div>
+                                <div class=" btn">
+                                    <button>submit</button>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+            <!-- <secont div> -->
+            <div class="child">
+                <div class="child-secondry">
+                    <img src="static/image/hotel-receptionist-work.jpg" alt="">
+
+                </div>
+                <div class="staff-action ">
+                    <div class="child-action">
+                        <ul>
+                            <li >
+                                <a href="/">home</a>
+                            </li>
+                            <li>
+                                about
+                            </li>
+                            <li>
+                                contact
+                            </li>
+                            <li>
+                                <button>
+                                   <a href="/slog" style="color:rgb(129, 129, 144);">log in</a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

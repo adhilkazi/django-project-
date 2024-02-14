@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <Style>
+        .parent{
+
+            display: block;
+            width: 100%;
+        }
+        h3{
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            font-size: 45px;
+        }
+    </Style>
+    
+</head>
+
+<body>
+    <div class=" bg-image">
+
+        <div class="parent">
+
+
+
+            <div>
+                <h3>beach hotal welcome     {{firstname}}</h3>
+                <p><a href="/logoutstaf/">logout</a></p>
+             
+                <p><a href="\up">update</a></p>
+                <br>
+                
+                
+
+            </div>
+
+            <!-- next div -->
+            <div class=" sing-child-primery">
+                <div>
+                    <table>
+                        <tr>
+                            <th>
+                                id
+                            </th>
+                            <th>
+                                firstname
+                            </th>
+
+                            <th>
+                                email
+                            </th>
+                            <th>
+                                phone number
+                            </th>
+                            <th>
+                                state
+                            </th>
+                            <th>
+                                views
+                            </th>
+                            <th>
+                                delete
+                            </th>
+                            <th>
+                                update
+                            </th>
+                        </tr>
+                        {% for i in cm %}
+                        <tr>
+
+                            <td>{{i.id}}</td>
+                            <td>{{i.firstname}}</td>
+                            <td>{{i.email}}</td>
+                            <td>{{i.phonenumber}}</td>
+                            <td>{{i.state}}</td>
+                            <td><a href="{% url 'cust_views' i.id %}" class="btn btn-primary">view</a></td>
+                            <td><a href="{% url 'delete' i.id %}" class="btn btn-primary">delete</a></td>
+                            <td><a href="{% url 'update_cust' i.id %}" class="btn btn-primary">update</a></td>
+
+
+                        </tr>
+                        {% endfor %}
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

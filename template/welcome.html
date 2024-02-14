@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+       
+
+        
+
+        table {
+
+            width: 100%;
+            border-spacing: 20px;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        td,
+        th {
+            
+            text-align: center;
+            padding: 10px;
+            font-family: sans-serif;
+            border-radius: 5px;
+
+        }
+
+        th {
+            background-color: rgb(4, 4, 35);
+            color: white;
+            text-transform: capitalize;
+        }
+
+        td {
+            background-color: rgb(220, 220, 225);
+        
+
+
+
+        }
+
+a{
+    color: black;
+    font-size: 19px;
+    text-transform: capitalize  ;
+}
+
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px 1px rgba(61, 58, 58, 0.461);
+            
+        }
+    </style>
+</head>
+
+<body>
+    
+    
+    <table>
+        <form action="">
+            <p><a href="/logoutuser/">logout</a></p>
+            {%csrf_token%}
+
+            <tr>
+
+
+                <th>
+                    room id
+                </th>
+                <th>
+                    amount
+                </th>
+                <th>
+                    bed space
+                </th>
+                <th>
+                    details
+                </th>
+                <th>
+                    type
+                </th>
+                <th>
+                    image
+                </th>
+                
+
+            </tr>
+        </form>
+
+
+        {% for i in cm%}
+        <tr>
+            <td>{{i.room_id}}</td>
+            <td>{{i.amount}}</td>
+            <td>{{i.bed_space}}</td>
+            <td>{{i.details}}</td>
+            <td>{{i.type}}</td>
+            {% if i.image %}
+
+            <td><img src="{{ i.image.url }}" /></td>
+            {% else %}
+            <td>no image</td>
+            {% endif %}
+            
+            <td><a href="{% url 'image' i.id %}" class="btn btn-primary">views</a></td> 
+
+
+        </tr>
+        {% endfor %}    
+    </table>
+</body>
+
+</html>

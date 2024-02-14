@@ -1,0 +1,104 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        .zz input{
+            width: 440px;
+           margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="home">
+        <div class="condiner">
+            <div class="child-primery">
+                 <div class="child-text">
+                    <p>beach hotal</p>
+                    <h3>the great place</h3>
+                    <h1>the best <br>
+                     surfing</h1>
+                    <h4>
+                        leave the city behind the city explore the greate outdoors at 
+                        enjoy your hollydays here
+                    </h4> 
+                     
+                       
+                    
+                 </div>
+            </div>
+
+            <!-- <secont div> -->
+            <div class="child">
+                <div class="child-secondry">
+                    <img src="/static/image/sea-water-luxury-poolside-blue.jpg" alt="">
+                    
+                </div>
+                <div class="action">
+                    <div>
+                        <ul>
+                            <li>
+                                <a href="/">home</a>
+                            </li>
+                            <li>
+                                about
+                            </li>
+                            <li>
+                                contact
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="\cuslog">log in</a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="validation">
+                        
+                        
+                        <div class="valida-input">
+                           
+                        <p>sign up  here</p>
+                        <form action=""  method="POST" enctype="multipart/form-data">
+                            {%csrf_token%}
+                            <div class="in">
+                            <input type="text" name="firstname"  placeholder="first name">
+                            <input type="text" name="lastname"  placeholder="last name">
+                            </div>
+                            <div class="zz">
+                                <input type="email" name="email" id="" placeholder="email">
+                                <br>
+                                <input type="text" name="phonenumber" placeholder="phon number">
+                                <input type="text" name="state" placeholder="state">
+                            </div>
+                            <div class="in">
+                                <input type="text" name="username" placeholder="username">
+                                <input type="password" name="password" id="" placeholder="password">
+
+                            </div>
+                            <div  class=" btn">
+                                <button>submit</button>
+                            </div>
+                            
+                        </form>
+                        
+
+
+
+                        </div>
+                        
+                    </div>
+               </div>
+
+               
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

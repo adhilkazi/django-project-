@@ -1,0 +1,121 @@
+
+ {%load static%}
+<!DOCTYPE html>
+
+
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/forms.css">
+    
+   <style>
+    /* Style the form container */
+    body{
+        background-color: #183d65;
+    }
+.your-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+   
+}
+
+/* Style the form labels */
+.your-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: rgb(197, 195, 195);
+}
+
+/* Style the form inputs */
+.your-form input[type="text"],
+.your-form input[type="email"],
+.your-form input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: transparent;
+   
+   
+}
+
+/* Style the form submit button */
+.your-form .submit-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+   
+}
+
+.your-form .submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Style validation error messages */
+.your-form .errorlist {
+    color: red;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Optional: Style for success message */
+.your-form .success-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+h1
+{
+    color: white;
+    text-transform: capitalize;
+}
+input::file-selector-button{
+    color:rgba(255, 255, 255, 0.735) ;
+    background: transparent;
+    border: 1px solid rgba(247, 247, 247, 0.735);
+    
+}
+input[type='file'] {
+  color: #ccc;  
+}
+
+button{
+    width: 400px;
+    padding: 10px;
+    border-radius: 7px;
+    background-color:transparent ;
+    border: 1px solid #ccc ;
+    color: #fff;
+}
+   </style>
+
+    
+</head>
+<body>
+    <div class="form-main">
+  <div class=" form-child">
+    <form action="" method="POST" enctype="multipart/form-data" class="your-form">
+
+        <h1>booking details uplode</h1>
+        
+        {%csrf_token%}
+            {{form.as_p}}
+
+        <button class=" btn-btn-primary">register</button>
+    </form>
+</div>  
+</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="home">
+        <div class="condiner">
+            <div class="child-primery">
+                 <div class="child-text">
+                    <p>beach hotal</p>
+                    <h3>the great place</h3>
+                    <h1>the best <br>
+                     surfing</h1>
+                    <h4>
+                        leave the city behind the city explore the greate outdoors at 
+                        enjoy your hollydays here
+                    </h4> 
+                     
+                       
+                    
+                 </div>
+            </div>
+
+            <!-- <secont div> -->
+            <div class="child">
+                <div class="child-secondry">
+                    <img src="/static/image/sea-water-luxury-poolside-blue.jpg" alt="">
+                    
+                </div>
+                <div class="action">
+                    <div>
+                        <ul>
+                            <li>
+                                <a href="/">home</a>
+                            </li>
+                            <li>
+                                about
+                            </li>
+                            <li>
+                                contact
+                            </li>
+                            <li>
+                                <button>
+                                  <a href="\cusignup">sign up</a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="validation-log">
+                        <div class="login-input ">
+                           
+                        <p>Login  here</p>
+                        <form action="/cust_login/" method="POST" enctype="multipart/form-data">
+                             <!-- messge show -->
+                             <br>
+                             {% for message in messages %}
+                             <div class="alert alert-success" style="color: white;">
+                                 {{message}}
+                             </div>
+                             <!-- messge show -->
+                             {% endfor %}
+                             <br>
+                             {%csrf_token%}
+                            <div class="lg">
+                                
+                                <input type="text" name="username" placeholder="username">
+                                <input type="text" name="password" placeholder="password">
+                            </div>
+                           
+                            <div  class=" btn">
+                                <button>submit</button>
+                            </div>
+                            
+                        </form>
+                        
+
+
+
+                        </div>
+                        
+                    </div>
+               </div>
+
+               
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
